@@ -1,0 +1,125 @@
+.pets-slider {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pets-slider__list {
+  @include list-style;
+
+  @media (min-width: $desktop-width) {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    row-gap: 30px;
+    width: 1050px;
+    margin: 0 auto;
+  }
+}
+
+.pets-slider__item:not(:first-child) {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.pets-slider__item {
+  &--pet1 {
+    @media (min-width: $desktop-width) {
+      grid-column: 2 / -1;
+      grid-row: 1 / -1;
+    }
+  }
+
+  &--pet2 {
+    @media (min-width: $desktop-width) {
+      grid-column: 1 / 2;
+      grid-row: 2 / -1;
+    }
+  }
+
+  &--pet3 {
+    @media (min-width: $desktop-width) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+  }
+}
+
+.pets-slider__picture {
+  vertical-align: bottom;
+
+  &--pet1 {
+    @media (min-width: $tablet-width) {
+      position: relative;
+      width: 530px;
+      height: 560px;
+      z-index: 3;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: static;
+      width: 474px;
+      height: 485px;
+    }
+  }
+
+  &--pet2 {
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 30px;
+      width: 430px;
+      height: 198px;
+      z-index: 1;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: static;
+      width: 517px;
+      height: 241px;
+      transform: none;
+    }
+  }
+
+  &--pet3 {
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 65px;
+      width: 471px;
+      height: 198px;
+      z-index: 2;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: static;
+      width: 517px;
+      height: 214px;
+      transform: none;
+    }
+  }
+}
+
+.pets-slider button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: $color-primary;
+  cursor: pointer;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.pets-slider__arrow {
+  @media (min-width: $tablet-width) {
+    width: 15px;
+    height: 30px;
+  }
+}
