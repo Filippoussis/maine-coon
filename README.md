@@ -8,4 +8,4 @@
 - использован CSS-препроцессор SASS
 - оптимизация шрифтов (preload, формат woff), картинок (формат webp, loading="lazy")
 - проверка performance в lighthouse
-- деплой с помощью gh-pages. Посмотреть проект в браузере: [maine-coon](filippoussis.github.io/maine-coon/)
+- деплой с помощью gh-pages. Посмотреть проект в браузере: [maine-coon](https://filippoussis.github.io/maine-coon/)
